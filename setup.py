@@ -8,7 +8,10 @@ if __name__ == "__main__":
     #Making sure it works :)
     #print(os.getenv("OPENAI_API_KEY"))
 
-    #Making a test call to openai
+    #setup the api key
+    openai.api_key = os.getenv("OPENAI_API_KEY")
+
+    # Making a test call to openai
     response = openai.Completion.create(
         model = "text-davinci-003",
         prompt = "What is the standard tuning of a bass guitar",
